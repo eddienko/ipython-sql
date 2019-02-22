@@ -56,7 +56,7 @@ class Connection(object):
             cls.current = existing or Connection(descriptor)
         else:
             if cls.connections:
-                print(cls.connection_list())
+                _ = cls.connection_list()
             else:
                 if os.getenv('DATABASE_URL'):
                     cls.current = Connection(os.getenv('DATABASE_URL'))
